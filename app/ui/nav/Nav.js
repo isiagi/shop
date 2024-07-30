@@ -29,9 +29,15 @@ export default function Home() {
           <h1 className="hidden md:block">EShop</h1>
 
           <ul className=" hidden md:flex gap-4">
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
+            <Link href="/">
+              <li>Home</li>
+            </Link>
+            <Link href={"/contact"}>
+              <li>Contact</li>
+            </Link>
+            <Link href={"/about"}>
+              <li>About</li>
+            </Link>
             <li>SignUp</li>
           </ul>
 
