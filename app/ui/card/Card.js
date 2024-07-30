@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { EyeIcon, HeartIcon } from "lucide-react";
+import { DeleteIcon, EyeIcon, HeartIcon } from "lucide-react";
 
-function CardUi() {
+function CardUi({ pathname }) {
   return (
     <Card>
       <div className="relative">
@@ -23,13 +23,28 @@ function CardUi() {
           sizes="100vw"
           className=" w-full h-[200px] ] object-cover object-center"
         />
-        <div className="absolute top-4 right-4 flex flex-col gap-2">
-          <Button variant="secondary" size="icon" className="rounded-full">
+        <div className={"absolute top-4 right-4 flex flex-col gap-2"}>
+          <Button
+            variant="secondary"
+            size="icon"
+            className={`${pathname === "/wishlist" && "hidden"} rounded-full`}
+          >
             <EyeIcon className="h-5 w-5" />
           </Button>
 
-          <Button variant="secondary" size="icon" className="rounded-full">
+          <Button
+            variant="secondary"
+            size="icon"
+            className={`${pathname === "/wishlist" && "hidden"} rounded-full`}
+          >
             <HeartIcon className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            className={`${pathname !== "/wishlist" && "hidden"} rounded-full`}
+          >
+            <DeleteIcon className="h-5 w-5" />
           </Button>
         </div>
       </div>
