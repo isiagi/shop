@@ -20,6 +20,7 @@ import {
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
@@ -38,7 +39,9 @@ export default function Home() {
             <Link href={"/about"}>
               <li>About</li>
             </Link>
-            <li>SignUp</li>
+            <Link href={"/signup"}>
+              <li>SignUp</li>
+            </Link>
           </ul>
 
           <Sheet>
@@ -53,7 +56,7 @@ export default function Home() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <nav className="grid gap-6 text-lg font-medium">
+              <nav className="grid gap-4 text-md font-medium mb-4">
                 <Link
                   href="#"
                   className="flex items-center gap-2 text-lg font-semibold"
@@ -62,32 +65,46 @@ export default function Home() {
                   <span className="sr-only">Acme Inc</span>
                 </Link>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Dashboard
+                  Home
                 </Link>
                 <Link
-                  href="#"
+                  href="/about"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Orders
+                  About
                 </Link>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Products
+                  Contact
                 </Link>
                 <Link
-                  href="#"
+                  href="/signup"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Customers
+                  Sign Up
                 </Link>
-                <Link href="#" className="hover:text-foreground">
-                  Settings
+                <Link
+                  href="/account"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  My Account
                 </Link>
+              </nav>
+              <Separator />
+              <h4 className="py-4">Categories</h4>
+              <nav className="grid gap-4 text-md font-medium">
+                <div className="flex flex-col gap-4">
+                  <Link href="/products">Home & Lifestyle</Link>
+                  <Link href="/products">Clothing</Link>
+                  <Link href="/products">Electronics</Link>
+                  <Link href="/products">Gadgets</Link>
+                  <Link href="/products">Women Fashion</Link>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
@@ -122,8 +139,11 @@ export default function Home() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
+
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Settings</DropdownMenuItem>
+                <Link href={"/account"}>
+                  <DropdownMenuItem>Account</DropdownMenuItem>{" "}
+                </Link>
                 <DropdownMenuItem>Support</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>Logout</DropdownMenuItem>

@@ -48,7 +48,7 @@ function page() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <div className="grid md:grid-cols-2 auto-rows-fr gap-6 pb-20">
+      <div className="grid md:grid-cols-2  gap-6 pb-20">
         <div className="">
           <ImageGallery
             className="h-full"
