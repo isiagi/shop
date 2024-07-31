@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className="bg-black text-white px-5 py-10">
-      <div className=" flex justify-between pb-10">
+      <div className=" flex justify-between pb-10 flex-wrap">
         <div>
           <h3 className="text-2xl">Support</h3>
           <ul className="leading-loose pt-3">

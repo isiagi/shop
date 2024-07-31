@@ -16,6 +16,7 @@ import {
 import { CarFrontIcon, RotateCwSquare } from "lucide-react";
 import SectionHeader from "@/app/ui/sectionHeader/SectionHeader";
 import CardUi from "@/app/ui/card/Card";
+import { Separator } from "@/components/ui/separator";
 
 const images = [
   {
@@ -57,7 +58,7 @@ function page() {
           />
         </div>
         <div>
-          <div className="border-b pb-3">
+          <div className=" pb-3">
             <h3>Product Name</h3>
             <p className="text-sm text-green-600">In Stock</p>
             <h3>UGX 100</h3>
@@ -68,6 +69,7 @@ function page() {
               unde non magnam? Natus est dolorum aperiam?
             </p>
           </div>
+          <Separator className="my-5" />
           <div className=" py-5 flex items-center gap-4 flex-wrap">
             <h3>Sizes : </h3>
             <ToggleGroup variant="outline" type="multiple">
@@ -99,7 +101,7 @@ function page() {
             </div>
             <Button className="w-1/2">Buy Now</Button>
           </div>
-          <div className="border p-3 mt-5">
+          <div className="border p-3 mt-7">
             <div className="flex items-center gap-2 border-b pb-2 mb-2">
               <CarFrontIcon />
               <span>
