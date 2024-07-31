@@ -25,6 +25,9 @@ module.exports = {
       gridTemplateColumns: {
         fluid: "repeat(auto-fit, minmax(15rem, 1fr))",
       },
+      gridAutoRows: {
+        fr: "minmax(0, 1fr)",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },

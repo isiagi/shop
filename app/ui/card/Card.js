@@ -9,7 +9,14 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { DeleteIcon, EyeIcon, HeartIcon } from "lucide-react";
+import {
+  DeleteIcon,
+  EyeIcon,
+  HeartIcon,
+  ShoppingBagIcon,
+  ShoppingCartIcon,
+} from "lucide-react";
+import Link from "next/link";
 
 function CardUi({ pathname }) {
   return (
@@ -24,13 +31,15 @@ function CardUi({ pathname }) {
           className=" w-full h-[200px] ] object-cover object-center"
         />
         <div className={"absolute top-4 right-4 flex flex-col gap-2"}>
-          <Button
-            variant="secondary"
-            size="icon"
-            className={`${pathname === "/wishlist" && "hidden"} rounded-full`}
-          >
-            <EyeIcon className="h-5 w-5" />
-          </Button>
+          <Link href="/detail/1">
+            <Button
+              variant="secondary"
+              size="icon"
+              className={`${pathname === "/wishlist" && "hidden"} rounded-full`}
+            >
+              <EyeIcon className="h-5 w-5" />
+            </Button>
+          </Link>
 
           <Button
             variant="secondary"
@@ -49,8 +58,13 @@ function CardUi({ pathname }) {
         </div>
       </div>
       <CardHeader>
-        <CardTitle className="text-lg">The Nort Coat</CardTitle>
-        <CardDescription>30,000 UGX</CardDescription>
+        <div className="flex items-center justify-between">
+          <div>
+            <CardTitle className="text-lg">The Nort Coat</CardTitle>
+            <CardDescription>30,000 UGX</CardDescription>
+          </div>
+          <ShoppingBagIcon className="h-7 w-7" />
+        </div>
       </CardHeader>
       {/* <CardContent>
         <Button>Add To Cart</Button>
