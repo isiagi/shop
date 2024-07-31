@@ -99,11 +99,11 @@ export default function Home() {
               <h4 className="py-4">Categories</h4>
               <nav className="grid gap-4 text-md font-medium">
                 <div className="flex flex-col gap-4">
-                  <Link href="/products">Home & Lifestyle</Link>
-                  <Link href="/products">Clothing</Link>
-                  <Link href="/products">Electronics</Link>
-                  <Link href="/products">Gadgets</Link>
-                  <Link href="/products">Women Fashion</Link>
+                  <Link href="/category/1">Home & Lifestyle</Link>
+                  <Link href="/category/1">Clothing</Link>
+                  <Link href="/category/1">Electronics</Link>
+                  <Link href="/category/1">Gadgets</Link>
+                  <Link href="/category/1">Women Fashion</Link>
                 </div>
               </nav>
             </SheetContent>

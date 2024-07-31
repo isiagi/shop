@@ -26,11 +26,11 @@ function Header() {
       <div className="grid gap-6  md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
         <nav className=" hidden  md:grid gap-4  border-r p-8">
           <div className="flex flex-col gap-6">
-            <Link href="/products">Home & Lifestyle</Link>
-            <Link href="/products">Clothing</Link>
-            <Link href="/products">Electronics</Link>
-            <Link href="/products">Gadgets</Link>
-            <Link href="/products">Women Fashion</Link>
+            <Link href="/category/1">Home & Lifestyle</Link>
+            <Link href="/category/1">Clothing</Link>
+            <Link href="/category/1">Electronics</Link>
+            <Link href="/category/1">Gadgets</Link>
+            <Link href="/category/1">Women Fashion</Link>
           </div>
         </nav>
 
