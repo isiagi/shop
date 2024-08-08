@@ -6,6 +6,8 @@ import Home from "./ui/nav/Nav";
 
 const fontSans = FontSans({
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
   variable: "--font-sans",
 });
 

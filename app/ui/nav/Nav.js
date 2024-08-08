@@ -1,3 +1,5 @@
+"use client";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -21,25 +23,39 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+  const pathname = usePathname();
   return (
     <>
       <header className="flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
         <nav className="flex justify-between items-center w-full">
-          <h1 className="hidden md:block">EShop</h1>
+          <h1 className="hidden md:block text-[#ff5252] text-xl">EShop</h1>
 
-          <ul className=" hidden md:flex gap-4">
-            <Link href="/">
+          <ul className=" hidden md:flex gap-4 text-muted-foreground font-light">
+            <Link
+              href="/"
+              className={`${pathname === "/" ? "text-[#ff5252]" : ""}`}
+            >
               <li>Home</li>
             </Link>
-            <Link href={"/contact"}>
+            <Link
+              href={"/contact"}
+              className={`${pathname === "/contact" ? "text-[#ff5252]" : ""}`}
+            >
               <li>Contact</li>
             </Link>
-            <Link href={"/about"}>
+            <Link
+              href={"/about"}
+              className={`${pathname === "/about" ? "text-[#ff5252]" : ""}`}
+            >
               <li>About</li>
             </Link>
-            <Link href={"/signup"}>
+            <Link
+              href={"/signup"}
+              className={`${pathname === "/signup" ? "text-[#ff5252]" : ""}`}
+            >
               <li>SignUp</li>
             </Link>
           </ul>
@@ -120,12 +136,22 @@ export default function Home() {
                 />
               </div>
             </form>
-            <Link href={"/wishlist"}>
-              <Heart />
-            </Link>
-            <Link href={"/cart"}>
-              <ShoppingBag />
-            </Link>
+            <div className="relative">
+              <Link href={"/wishlist"}>
+                <Heart className="font-light" />
+              </Link>
+              <p className="absolute -top-3 -right-3 text-sm bg-[#ff5252] text-white w-5 h-5 rounded-full flex items-center justify-center">
+                0
+              </p>
+            </div>
+            <div className="relative">
+              <Link href={"/cart"}>
+                <ShoppingBag />
+              </Link>
+              <p className="absolute -top-3 -right-3 text-sm bg-[#ff5252] text-white w-5 h-5 rounded-full flex items-center justify-center">
+                0
+              </p>
+            </div>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
