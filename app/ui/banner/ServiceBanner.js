@@ -3,7 +3,7 @@ import React from "react";
 
 function ServiceBanner() {
   return (
-    <div className="flex justify-between flex-wrap items-center gap-10 py-10 px-5">
+    <div className="flex justify-center md:justify-between  flex-wrap items-center gap-10 py-10 px-5">
       <div className="text-center">
         <CarFront className="mx-auto" />
         <h3>Free And Fast Delievry</h3>

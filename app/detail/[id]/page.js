@@ -54,7 +54,7 @@ function page() {
           <ImageGallery
             className="h-full"
             items={images}
-            thumbnailPosition="left"
+            // thumbnailPosition="left"
           />
         </div>
         <div>
