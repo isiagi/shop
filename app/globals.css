@@ -4,6 +4,15 @@
 
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+/* &.fullscreen-modal {
+  background: $ig-black;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;

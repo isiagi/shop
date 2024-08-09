@@ -41,30 +41,29 @@ function page() {
         <TableCaption>A list of your cart items</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead>Product</TableHead>
-            <TableHead>Price</TableHead>
+            <TableHead className="hidden sm:table-cell">Image</TableHead>
+            <TableHead>Description</TableHead>
             <TableHead>Quantity</TableHead>
             <TableHead className="text-right">Sub Total</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
-            <TableCell className="font-medium">
-              <div className="flex items-center space-x-3">
-                <Image
-                  className="h-16 w-16 rounded-md object-cover"
-                  src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
-                <div>
-                  <p className="text-sm">Basic Tee 6-Pack</p>
-                  <p className="text-xs">Gray</p>
-                </div>
+            <TableCell className="hidden sm:table-cell">
+              <Image
+                className="h-16 w-16 rounded-md object-cover "
+                src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                alt=""
+                width={100}
+                height={100}
+              />
+            </TableCell>
+            <TableCell>
+              <div>
+                <p className="text-sm">Basic Tee 6-Pack</p>
+                <p className="text-sm">Gray</p>
               </div>
             </TableCell>
-            <TableCell>Paid</TableCell>
             <TableCell>
               <input
                 type="number"
@@ -77,16 +76,16 @@ function page() {
         </TableBody>
       </Table>
       <div>
-        <Button>Return To Shop</Button>
+        <Button variant="outline">Return To Shop</Button>
       </div>
 
       <div className="grid grid-cols-fluid gap-10 pb-20">
-        <div className="flex justify-between items-center gap-10 py-10">
-          <Input placeholder="Coupon Code" />
-          <Button>Apply</Button>
+        <div className="flex justify-between  gap-5 py-10 w-full md:w-[50%]">
+          <Input placeholder="Coupon Code" className="" />
+          <Button className="bg-[#ff5252]">Apply</Button>
         </div>
-        <div>
-          <h3 className="text-2xl">Cart Total</h3>
+        <div className="text-muted-foreground border p-4">
+          <h3 className="text-2xl text-slate-900">Cart Total</h3>
           <div className="flex justify-between items-center gap-10 py-3">
             <h4>Subtotal</h4>
             <p>$250.00</p>
@@ -99,7 +98,7 @@ function page() {
             <h4>Total</h4>
             <p>$250.00</p>
           </div>
-          <Button className="w-full">Proceed to checkout</Button>
+          <Button className="w-full bg-[#ff5252]">Proceed to checkout</Button>
         </div>
       </div>
     </div>

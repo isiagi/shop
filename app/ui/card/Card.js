@@ -32,7 +32,7 @@ function CardUi({ pathname }) {
           width={0}
           height={0}
           sizes="100vw"
-          className=" w-full h-[200px] ] object-cover object-center"
+          className="p-1 w-full h-[180px] md:h-[190px]  object-cover object-center rounded-xl"
         />
         <div className={"absolute top-4 right-4 flex flex-col gap-2"}>
           <Button

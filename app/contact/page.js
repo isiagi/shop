@@ -7,7 +7,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { PhoneCall } from "lucide-react";
+import { Mailbox, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 function page() {
   return (
     <div>
-      <div>
+      <div className="px-5">
         <Breadcrumb className="pt-10 pb-10">
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -28,25 +28,38 @@ function page() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <div className="flex items-center justify-center gap-20 py-10">
+      <div className="flex justify-center gap-20 py-10 text-muted-foreground">
         <div className="leading-loose">
           <div className="flex items-center gap-4">
-            <PhoneCall />
+            <Button
+              variant="secondary"
+              size="icon"
+              className="rounded-full bg-[#ff5252] text-white"
+            >
+              <PhoneCall size={18} />
+            </Button>
             <h3>Talk To Us</h3>
           </div>
           <p>We are available 24/7, 7 days a week.</p>
-          <p>Phone: +8801611112222</p>
+          <p>Phone: +2560987567890</p>
 
           <hr className="my-10" />
 
           <div className="flex items-center gap-4">
-            <PhoneCall />
-            <h3>Talk To Us</h3>
+            <Button
+              variant="secondary"
+              size="icon"
+              className="rounded-full bg-[#ff5252] text-white"
+            >
+              <Mailbox />
+            </Button>
+            <h3>Write To Us</h3>
           </div>
-          <p>We are available 24/7, 7 days a week.</p>
-          <p>Phone: +8801611112222</p>
+          <p>Fill out our form and we will contact you within 24 hours.</p>
+          <p>Email: customer@eshop.com</p>
+          <p>Email: support@eshop.com</p>
         </div>
-        <div>
+        <div className="border p-5">
           <form>
             <div className="grid md:grid-cols-3 gap-4">
               <Input placeholder="Your Name" />
@@ -54,10 +67,12 @@ function page() {
               <Input placeholder="Your Phone" />
             </div>
             <div className="my-7">
-              <Textarea placeholder="Your Message" />
+              <Textarea cols={5} placeholder="Your Message" />
             </div>
 
-            <Button type="submit">Send Message</Button>
+            <Button type="submit" className="bg-[#ff5252]">
+              Send Message
+            </Button>
           </form>
         </div>
       </div>
